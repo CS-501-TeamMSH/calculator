@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         //btnclick Event
 
         btnSum.setOnClickListener {
-            val n1 = number1.text.toString().toInt()
-            val n2 = number2.text.toString().toInt()
+            val n1 = number1.text.toString().toFloat()
+            val n2 = number2.text.toString().toFloat()
 
             val result = n1 + n2
             resultView.text = result.toString()
@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnSub.setOnClickListener {
-            val n1 = number1.text.toString().toInt()
-            val n2 = number2.text.toString().toInt()
+            val n1 = number1.text.toString().toFloat()
+            val n2 = number2.text.toString().toFloat()
 
             val result = n1 - n2
             resultView.text = result.toString()
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnMul.setOnClickListener {
-            val n1 = number1.text.toString().toInt()
-            val n2 = number2.text.toString().toInt()
+            val n1 = number1.text.toString().toFloat()
+            val n2 = number2.text.toString().toFloat()
 
             val result = n1 * n2
             resultView.text = result.toString()
@@ -53,8 +53,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnDivide.setOnClickListener {
-            val n1 = number1.text.toString().toInt()
-            val n2 = number2.text.toString().toInt()
+            val n1 = number1.text.toString().toFloat()
+            val n2 = number2.text.toString().toFloat()
 
             val result = n1 / n2
 
