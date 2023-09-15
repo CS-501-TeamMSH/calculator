@@ -58,10 +58,13 @@ class MainActivity : AppCompatActivity() {
 
             val result = n1 / n2
 
-            //check with 0
-
-
-            resultView.text = result.toString()
+            if ( n2.toInt() == 0 )
+            {
+                resultView.text = "Division by 0 is NOT allowed"
+            }
+            else{
+                resultView.text = result.toString()
+            }
 
         }
 
