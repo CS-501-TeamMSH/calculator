@@ -23,63 +23,124 @@ class MainActivity : AppCompatActivity() {
         val btnDivide = findViewById<Button>(R.id.showInput4) as Button
         val btnMod = findViewById<Button>(R.id.showInput5) as Button
 
-
         //btnclick Event
 
         btnSum.setOnClickListener {
-            val n1 = number1.text.toString().toFloat()
-            val n2 = number2.text.toString().toFloat()
 
-            val result = n1 + n2
-            resultView.text = result.toString()
+            val input1 = number1.text.toString()
+            val input2 = number2.text.toString()
+
+            if (input1.isEmpty() || input2.isEmpty()) {
+                resultView.text = "Both fields are required!"
+            }
+
+            else{
+
+                val n1 = number1.text.toString().toFloat()
+                val n2 = number2.text.toString().toFloat()
+
+
+                val result = n1 + n2
+                resultView.text = result.toString()
+
+            }
 
         }
 
         btnSub.setOnClickListener {
-            val n1 = number1.text.toString().toFloat()
-            val n2 = number2.text.toString().toFloat()
 
-            val result = n1 - n2
-            resultView.text = result.toString()
+            val input1 = number1.text.toString()
+            val input2 = number2.text.toString()
+
+            if (input1.isEmpty() || input2.isEmpty()) {
+                resultView.text = "Both fields are required!"
+            }
+
+            else
+            {
+
+                val n1 = number1.text.toString().toFloat()
+                val n2 = number2.text.toString().toFloat()
+
+                val result = n1 - n2
+                resultView.text = result.toString()
+
+            }
 
         }
 
         btnMul.setOnClickListener {
-            val n1 = number1.text.toString().toFloat()
-            val n2 = number2.text.toString().toFloat()
 
-            val result = n1 * n2
-            resultView.text = result.toString()
+
+            val input1 = number1.text.toString()
+            val input2 = number2.text.toString()
+
+            if (input1.isEmpty() || input2.isEmpty()) {
+                resultView.text = "Both fields are required!"
+            }
+            else{
+
+                val n1 = number1.text.toString().toFloat()
+                val n2 = number2.text.toString().toFloat()
+
+                val result = n1 * n2
+                resultView.text = result.toString()
+            }
 
         }
 
         btnDivide.setOnClickListener {
-            val n1 = number1.text.toString().toFloat()
-            val n2 = number2.text.toString().toFloat()
 
-            val result = n1 / n2
+            val input1 = number1.text.toString()
+            val input2 = number2.text.toString()
 
-            if ( n2.toInt() == 0 )
-            {
-                resultView.text = "Division by 0 is NOT allowed"
+            if (input1.isEmpty() || input2.isEmpty()) {
+                resultView.text = "Both fields are required!"
             }
+
             else{
-                resultView.text = result.toString()
+                val n1 = number1.text.toString().toFloat()
+                val n2 = number2.text.toString().toFloat()
+
+                val result = n1 / n2
+
+                if ( n2.toInt() == 0 )
+                {
+                    resultView.text = "Division by 0 is NOT allowed"
+                }
+                else{
+                    resultView.text = result.toString()
+                }
+
             }
+
 
         }
 
         btnMod.setOnClickListener {
-            val n1 = number1.text.toString().toFloat()
-            val n2 = number2.text.toString().toFloat()
 
-            val result = n1 % n2
+            val input1 = number1.text.toString()
+            val input2 = number2.text.toString()
 
-            if (n2.toInt() == 0) {
-                resultView.text = "Modulus by 0 is NOT allowed"
-            } else {
-                resultView.text = result.toString()
+            if (input1.isEmpty() || input2.isEmpty()) {
+                resultView.text = "Both fields are required!"
             }
+
+            else{
+                val n1 = number1.text.toString().toFloat()
+                val n2 = number2.text.toString().toFloat()
+
+                val result = n1 % n2
+
+                if (n2.toInt() == 0) {
+                    resultView.text = "Modulus by 0 is NOT allowed"
+                } else {
+                    resultView.text = result.toString()
+                }
+
+            }
+
+
         }
 
 
