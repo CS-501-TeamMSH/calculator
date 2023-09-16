@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val btnSub = findViewById<Button>(R.id.showInput2) as Button
         val btnMul = findViewById<Button>(R.id.showInput3) as Button
         val btnDivide = findViewById<Button>(R.id.showInput4) as Button
+        val btnMod = findViewById<Button>(R.id.showInput5) as Button
 
 
         //btnclick Event
@@ -68,7 +69,19 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        //need mod functionality
+        btnMod.setOnClickListener {
+            val n1 = number1.text.toString().toFloat()
+            val n2 = number2.text.toString().toFloat()
+
+            val result = n1 % n2
+
+            if (n2.toInt() == 0) {
+                resultView.text = "Modulus by 0 is NOT allowed"
+            } else {
+                resultView.text = result.toString()
+            }
+        }
+
 
     }
 
